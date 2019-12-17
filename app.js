@@ -33,6 +33,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Routes
 app.use('/auth', require('./routes/auth'));
+app.use('/states', require('./routes/states'));
+app.use('/counties', require('./routes/counties'));
 
 
 

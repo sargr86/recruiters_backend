@@ -4,6 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const server = require('http').createServer(app);
 const cors = require('cors');
+const path = require('path');
 
 
 // Cors
@@ -23,7 +24,7 @@ require('dotenv').config();
 // Body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use("/", express.static( __dirname + '/dist' ));
+app.use("/", express.static(__dirname + '/dist'));
 
 // // Passport.js config
 // const passport = require('passport');

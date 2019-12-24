@@ -23,7 +23,7 @@ require('dotenv').config();
 // Body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
+app.use("/", express.static( __dirname + '/dist' ));
 
 // // Passport.js config
 // const passport = require('passport');
@@ -35,6 +35,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use('/auth', require('./routes/auth'));
 app.use('/states', require('./routes/states'));
 app.use('/counties', require('./routes/counties'));
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './dist/index.html'));
+});
 
 
 

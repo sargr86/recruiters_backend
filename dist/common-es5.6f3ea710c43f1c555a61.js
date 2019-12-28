@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{PCNd:function(n,t,i){"use strict";i.d(t,"a",(function(){return o})),i.d(t,"b",(function(){return e}));var e={url:"https://httpbin.org/post",maxFilesize:50,acceptedFiles:"image/*"},o=function(){}}}]);

@@ -8,6 +8,7 @@ const passport = require('passport');
 
 // Regular auth routes and social auth logout route
 router.post('/register', validateRegister.rules, authController.register);
+router.put('/update-profile', authController.updateProfile); //validateRegister.rules,
 router.post('/login', validateLogin.rules, authController.login);
 router.get('/logout', authController.logout);
 

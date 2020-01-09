@@ -10,12 +10,24 @@ module.exports = {
             },
         }, ['id']);
 
+
         const role_id = await queryInterface.rawSelect('roles', {
             where: {
                 name: 'Super Admin'
             },
         }, ['id']);
 
+        const state_id = await queryInterface.rawSelect('states', {
+            where: {
+                name: 'Alabama'
+            },
+        }, ['id']);
+
+        const county_id = await queryInterface.rawSelect('counties', {
+            where: {
+                name: 'Baldwin County'
+            },
+        }, ['id']);
 
         return queryInterface.bulkInsert('users', [
             {
@@ -26,6 +38,8 @@ module.exports = {
                 password: bcrypt.hashSync('12345678', 10),
                 profile_img: '',
                 role_id: role_id,
+                state_id: state_id,
+                county_id: county_id,
                 status_id: status_id,
                 created_at: new Date(),
                 updated_at: new Date()

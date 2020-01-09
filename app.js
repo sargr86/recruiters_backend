@@ -35,6 +35,7 @@ app.use("/", express.static(__dirname + '/dist'));
 // Routes
 app.use('/auth', require('./routes/auth'));
 app.use('/states', require('./routes/states'));
+app.use('/users', require('./routes/users'));
 app.use('/counties', require('./routes/counties'));
 
 

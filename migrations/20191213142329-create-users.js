@@ -14,6 +14,12 @@ module.exports = {
             status_id: {
                 type: Sequelize.INTEGER
             },
+            state_id: {
+                type: Sequelize.INTEGER
+            },
+            county_id: {
+                type: Sequelize.INTEGER
+            },
             first_name: {
                 type: Sequelize.STRING
             },
@@ -21,6 +27,9 @@ module.exports = {
                 type: Sequelize.STRING
             },
             gender: {
+                type: Sequelize.STRING
+            },
+            zip_code: {
                 type: Sequelize.STRING
             },
             email: {
@@ -34,11 +43,13 @@ module.exports = {
             },
             created_at: {
                 allowNull: false,
-                type: Sequelize.DATE
+                type: Sequelize.DATEONLY,
+                defaultValue: new Date()
             },
             updated_at: {
                 allowNull: false,
-                type: Sequelize.DATE
+                type: Sequelize.DATE,
+                // defaultValue: new Date()
             }
         });
     },

@@ -14,7 +14,7 @@ exports.getByState = async (req, res) => {
         include: [
             {
                 model: States, where: {
-                    name: req.query.state
+                    id: req.query.stateId
                 }
             }
         ]
